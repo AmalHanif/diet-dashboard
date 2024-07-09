@@ -1,0 +1,54 @@
+<div class="container justify-content-center p-3">
+    <h1 class="custom-1">Today</h1>
+
+    <table class="table table-bordered table-hover table-sm">
+        
+        <caption>Select row to remove the Items from TodayList</caption>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Food Items</th>
+                <th class="text-center" scope="col" colspan="3">Macro Nutrients</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- <th scope="row"></th> -->
+                <th scope="row">#</th>
+                <th scope="col">Names</th>
+                <th scope="col">Fat</th>
+                <th scope="col">Carbohydrate</th>
+                <th scope="col">Protein</th>
+                <!-- <th scope="col">
+                    <button class="btn btn-primary mx-1" type="button"><i class="bi bi-plus-lg"></i></button>
+                    <button class="btn btn-danger  mx-1" type="button"><i class="bi bi-trash3"></i></button>
+                </th> -->
+            </tr>
+            <tr *ngFor="let food of todayFoodList" >
+                <td><input class="form-check-input" (click)="selectItem($event,food)" type="checkbox" value="" id="flexCheckDefault"></td>
+                <!-- <th scope="row">{{food.id}}</th> -->
+                <td>{{food.name}}</td>
+                <td>{{food.fat}}</td>
+                <td>{{food.carbohydrate}}</td>
+                <td>{{food.protein}}</td>
+                
+            </tr>
+            <tr>
+                
+                <td></td>
+                <th scope="row">Total</th>
+                <td>{{totalFat.toFixed(2)}}</td>
+                <td>{{totalCarbohydrate.toFixed(2)}}</td>
+                <td>{{totalProtein.toFixed(2)}}</td>
+                <!-- <td></td> -->
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" (click)="RemoveFromTodayList()" type="button">Remove from today’s list</button>
+    </div>
+    
+   
+    
+</div>

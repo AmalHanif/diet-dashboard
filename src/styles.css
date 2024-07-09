@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+body{
+    font-family: "Georgia", Times, serif;
+}
+.custom-1 {
+  color: #330867;
+}
+.bg-custom-1 {
+    background-color: #330867 ;
+}
+
+.bg-custom-2 {
+/* background-image: linear-gradient(15deg, #330867 0%, #30cfd0 100%); */
+background-image: linear-gradient(15deg,#330867 0%,#30cfd0 100%);
+}
+.bg-custom-3 {
+  background-color: #74c2be ;
+}
+
+.btn.btn-primary {
+    color: #fff;
+    background-color: #330867;
+    border-color: #330867;
+  }
+  .btn.btn-primary.focus,
+  .btn.btn-primary:focus {
+    color: #fff;
+    background-color: #30cfd0;
+    border-color: #30cfd0;
+    outline: none;
+    box-shadow: none;
+  }
+  .btn.btn-primary:hover {
+    color: #fff;
+    background-color: #30cfd0;
+    border-color: #30cfd0;
+    outline: none;
+    box-shadow: none;
+  }
+  .btn.btn-primary.active,
+  .btn.btn-primary:active {
+    color: #fff;
+    background-color: #30cfd0;
+    border-color: #30cfd0;
+    outline: none;
+  }
+  .btn.btn-primary.active.focus,
+  .btn.btn-primary.active:focus,
+  .btn.btn-primary.active:hover,
+  .btn.btn-primary:active.focus,
+  .btn.btn-primary:active:focus,
+  .btn.btn-primary:active:hover {
+    color: #fff;
+    background-color: #30cfd0;
+    border-color: #30cfd0;
+    outline: none;
+    box-shadow: none;
+  }
+
+
+
+
+
+  .nav-pills .nav-link .focus,
+  .nav-pills .nav-link :focus {
+    color: #000;
+    background-color: #30cfd0;
+    border-color: #30cfd0;
+    outline: none;
+    box-shadow: none;
+  }
+  .nav-pills .nav-link :hover {
+    color: #000;
+    background-color: #30cfd0;
+    border-color: #30cfd0;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .nav-pills .nav-link.active,
+   .nav-pills .show>.nav-link {
+    color: #000;
+    background-color: #30cfd0;
+    border-color: #30cfd0;
+    outline: none;
+  }
+  .nav-pills .nav-link .active.focus,
+  .nav-pills .nav-link .active:focus,
+  .nav-pills .nav-link .active:hover,
+  .nav-pills .nav-link :active.focus,
+  .nav-pills .nav-link :active:focus,
+  .nav-pills .nav-link :active:hover {
+    color: #000;
+    background-color: #330867;
+    border-color: #330867;
+    outline: none;
+    box-shadow: none;
+  }

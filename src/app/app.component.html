@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="row p-0 m-0">
+    <div class=" col-2 nav d-flex flex-column nav-pills me-3 bg-custom-1 p-3" id="v-pills-tab " role="tablist"
+        aria-orientation="vertical" style="width: 230px;  min-height: calc(100vh - 50px);">
+        <button class="nav-link text-white my-2 text-start active" id="food-list-tab" data-bs-toggle="pill"
+        data-bs-target="#food-list" type="button" role="tab" aria-controls="food-list"
+        aria-selected="false"><i class="bi bi-list-columns"> </i>  Food List</button>
+        <button class="nav-link  text-white my-2 text-start" id="today-tab" data-bs-toggle="pill"
+        data-bs-target="#today" type="button" role="tab" aria-controls="today"
+        aria-selected="false"><i class="bi bi-card-checklist"> </i>  Today</button>
+        <button class="nav-link text-white my-2 text-start" id="charts-tab" data-bs-toggle="pill" data-bs-target="#charts"
+            type="button" role="tab" aria-controls="charts" aria-selected="true"><i class="bi bi-pie-chart"> </i>  Chart</button>
+       
+     
+    </div>
+    <div class=" col tab-content" id="v-pills-tabContent">
+         <div class="tab-pane fade show active" id="food-list" role="tabpanel" aria-labelledby="food-list-tab" tabindex="0">
+            <app-foodList  (selectedListToday)="addListToToday($event)"></app-foodList>
+        </div>
+        <div class="tab-pane fade" id="today" role="tabpanel" aria-labelledby="today-tab" tabindex="0">
+            <app-today [selectedList]="TodayList"  (selecttoRemove)="removeListFromToday($event)"  (fat)="totalFat($event)" (protein)="totalprotein($event)" (carbohydrate)="totalcarbohydrate($event)"></app-today>
+        </div>
+        <div class="tab-pane fade " id="charts" role="tabpanel" aria-labelledby="charts-tab" tabindex="0">
+            <app-charts [fat]="fat" [protein]="protein" [carbohydrate]="carbohydrate"></app-charts>
+        </div>
+       
+       
+    </div>
+</div>
+<app-footer></app-footer>
